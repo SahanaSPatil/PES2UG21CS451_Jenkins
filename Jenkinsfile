@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
+                //script {
                     // Compile the .cpp file using shell script
                     build 'PES2UG21CS451-1'
                     sh 'g++ main.cpp -o output'
-                }
+                //}
             }
         }
         stage('Test') {
             steps {
-                script {
+               // script {
                     // Print output of the .cpp file using shell script
                     sh './output'
-                }
+               // }
             }
         }
         stage('Deploy') {
